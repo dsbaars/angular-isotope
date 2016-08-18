@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="styles/style.css"/>
   <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/github.min.css">
-</head>   
+</head>
 <body ng-app="angular-isotope-demo">
 
   <!--[if lt IE 7]>
@@ -62,7 +62,7 @@
             </div>
           </div>
         </div>
-  
+
         <div class="row">
           <div class="col-md-6">
             <h4>Selector and Value-Based Sort</h4>
@@ -77,11 +77,11 @@
             <button type='button' class='btn btn-default' onClick="addToList()">Add item to array</button>
           </div>
         </div>
-   
+
           <p></p>
         <div class="row">
           <div class="col-md-12">
-            <h4>Basic ng-repeat</h4> 
+            <h4>Basic ng-repeat</h4>
             <div hljs><li ng-repeat="x in xList" isotope-item>...</li></div>
           </div>
         </div>
@@ -117,7 +117,7 @@
       <!-- COLUMN 2 -->
 
       <div class="col-md-6">
-        
+
         <div class="row">
           <h4><a href="index.html" >Basic</a> | <a href="advanced.html"> ng-repeat with orderBy filter </a> | <a href="advancedplus.html">Best Practice</a></h4>
         </div>
@@ -126,7 +126,7 @@
           <div class="col-md-12 well">
             <h3>ng-repeat</h3>
             <body>
-            <p>Angular-Isotope is focussed on AngularJS's "ng-repeat" iteration directive to mass-produce Isotope tiles. 
+            <p>Angular-Isotope is focussed on AngularJS's "ng-repeat" iteration directive to mass-produce Isotope tiles.
             </p>
             <p>For each item in the given Angular array, an Isotope tile is stamped from the element block specified by "isotope-item".
             </p>
@@ -150,7 +150,7 @@
             </div>
 <!-- /CODE -->
           <p>
-          The "isotope-container" directive defines the bounds of the Isotope wrapper. 
+          The "isotope-container" directive defines the bounds of the Isotope wrapper.
           </p>
           <p>The "isotope-item" directive uses its element block as the template for the Isotope tile.
           </p>
@@ -174,14 +174,14 @@ $scope.$emit('iso-method', {name:methodName, params:optionalParameters}; </div>
              <p>
           <h3>Example</h3>
             <div hljs>$emit('iso-method', {name:'shuffle', params:null})</div>
-            <button class="btn btn-danger" ng-click="$emit('iso-method', {name:'shuffle', params:null})">Shuffle</button> 
+            <button class="btn btn-danger" ng-click="$emit('iso-method', {name:'shuffle', params:null})">Shuffle</button>
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-12 well">
             <h3>opt-kind directive for sortBy and filters</h3>
-            A filter uses a JQuery selector (attribute, class, or id) to reduce by category. A sortBy uses the JQuery selector to get a value for comparison. 
+            A filter uses a JQuery selector (attribute, class, or id) to reduce by category. A sortBy uses the JQuery selector to get a value for comparison.
             <p></p>
             The "opt-kind" directive specifies a "filter" or "sortBy" key for an element group. For each element in that group, "ok-sel" specifies the selector, and makes that element clickable to invoke the sort or filter.
             <p></p>
@@ -203,7 +203,7 @@ $scope.$emit('iso-method', {name:methodName, params:optionalParameters}; </div>
   <button type="button" class="btn btn-default" ok-sel="[date]" ok-type="integer">Date</button>
 </div>
             </hljs>
-            The "opt-kind" directive is either "sortBy" or "filter", which corresponds to the same-named Isotope configuration keys. 
+            The "opt-kind" directive is either "sortBy" or "filter", which corresponds to the same-named Isotope configuration keys.
             <p></p>
             The element becomes clickable and emits a message to the isotope-container when clicked.
 .           <p></p>
@@ -237,7 +237,7 @@ $scope.$emit('iso-method', {name:methodName, params:optionalParameters}; </div>
     </div>
   </div>
 
-  <script src="scripts/vendor/jquery-2.1.0.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js"></script>
   <script>
     var addToList = function(number) {
       var s=angular.element('#isotopeContainer').scope();
@@ -261,9 +261,11 @@ $scope.$emit('iso-method', {name:methodName, params:optionalParameters}; </div>
       s.$apply(s.xList = items);
     };
   </script>
-  <script src="scripts/vendor/angular.min.js"></script>
-  <script src="scripts/vendor/jquery.isotope.js"></script>
-  <script src="scripts/angular-isotope.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.30/angular.js"></script>
+  <script src="https://npmcdn.com/isotope-layout@3.0/dist/isotope.pkgd.js"></script>
+ <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.js"></script>-->
+
+  <script src="../dist/angular-isotope.js"></script>
   <script src="scripts/app.js"></script>
   <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
   <script src="http://pc035860.github.io/angular-highlightjs/angular-highlightjs.min.js"></script>

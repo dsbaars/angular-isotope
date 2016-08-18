@@ -1,6 +1,6 @@
 {
-    "name": "angular-isotope-fixed",
-    "main": ["dist/angular-isotope-fixed.js"],
+    "name": "angular-isotope",
+    "main": ["dist/angular-isotope.js"],
     "version": "0.1.16",
     "homepage": "https://github.com/mankindsoftware/angular-isotope",
     "authors": [
@@ -8,7 +8,7 @@
     ],
     "dependencies": {
         "angular": "~1.0.7",
-        "isotope": "~1.2"
+        "isotope": "2.2.2"
     },
     "devDependencies": {
         "angular-mocks": "~1.0.7",
@@ -23,6 +23,3 @@
     ],
     "license": "GPL 3"
 }
-
-
-
